@@ -39,7 +39,6 @@
 #
 # DEPENDENCIES:
 #   gem: sensu-plugin
-#   gem: net
 #
 # USAGE:
 #   #YELLOW
