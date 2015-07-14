@@ -1,6 +1,6 @@
 ## Sensu-Plugins-openvpn
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-openvpn.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-openvpn)
+[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-openvpn.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-openvpn)
 [![Gem Version](https://badge.fury.io/rb/sensu-plugins-openvpn.svg)](http://badge.fury.io/rb/sensu-plugins-openvpn)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn)
