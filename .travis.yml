@@ -1,19 +1,31 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+deploy:
+  provider: rubygems
+  api_key:
+    secure: U8AZVK0UpxCwa+AY0d8xN1mJZ1FzUF1Atd/zycXqf5JZlwL8w7h20cMQWl/dx+o3xDPWGVCDejNH/j92/ogmlCRrXfz1PH3ksKxg8k4DkQuCWQgzZ1EYh9GwI4KzmBXmSmX1GszvEqcjenaY8Q42JhUiZlmGNdDzNNPsImm28gE=
+  gem: sensu-plugins-openvpn
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-openvpn
