@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-openvpn)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-openvpn.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-openvpn)
-[ ![Codeship Status for sensu-plugins/sensu-plugins-openvpn](https://codeship.com/projects/d85b26c0-e94a-0132-bf5e-5a3dd864e215/status?branch=master)](https://codeship.com/projects/82933)
 
 ## Functionality
 

@@ -16,16 +16,19 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
+- gem build sensu-plugins-openvpn.gemspec
+- gem install sensu-plugins-openvpn-*.gem
 deploy:
   provider: rubygems
   api_key:
-    secure: U8AZVK0UpxCwa+AY0d8xN1mJZ1FzUF1Atd/zycXqf5JZlwL8w7h20cMQWl/dx+o3xDPWGVCDejNH/j92/ogmlCRrXfz1PH3ksKxg8k4DkQuCWQgzZ1EYh9GwI4KzmBXmSmX1GszvEqcjenaY8Q42JhUiZlmGNdDzNNPsImm28gE=
+    secure: c3FzsS7Yb0wkswWZ44TR2e0atvI3bFTMcVsa8RgrBE1Z49a0NduhuCI+ibUicOrWIldnpGplWkzlqkQXxDCEF74HE1ku+wc67As5kDVDDi8JBPl0wcZYw68vdr2GCkrPckoXiCRcDXlLSFWPEYP1/sQs3bfGIlrPIfzHg0XPdWo=
   gem: sensu-plugins-openvpn
   on:
     tags: true
-    all_branches: true
+    repo: sensu-plugins/sensu-plugins-openvpn
+     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
     rvm: 2.1
     rvm: 2.2
-    repo: sensu-plugins/sensu-plugins-openvpn
+
