@@ -5,6 +5,14 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+### Added
+- Travis build automation to generate Sensu Asset tarballs that can be used n conjunction with Sensu provided ruby runtime assets and the Bonsai Asset Index
+- Require latest sensu-plugin for Sensu Go support
+
+### Breaking change
+- Updates minimum required ruby version to 2.3. Drop unsupported ruby versions.
+- Update dependancy on sensu-plugin to 4.0
+
 ## [1.0.0] 2017-07-14
 ### Added
 - Testing on Ruby 2.3.0 & 2.4.1
