@@ -12,8 +12,8 @@
 - [Configuration](#configuration)
   - [Sensu Go](#sensu-go)
     - [Asset registration](#asset-registration)
-    - [Asset manifest](#asset-manifest)
-    - [Check manifest](#check-manifest)
+    - [Asset definition](#asset-definition)
+    - [Check definition](#check-definition)
   - [Sensu Core](#sensu-core)
     - [Check definition](#check-definition)
   - [Additional information](#additional-information)
@@ -48,7 +48,7 @@ Assets are the best way to make use of this handler. If you're not using an asse
 
 If you're using an earlier version of sensuctl, you can download the asset definition from [this project's Bonsai Asset Index page](https://bonsai.sensu.io/assets/sensu-plugins/sensu-plugins-openvpn).
 
-##### Asset manifest
+##### Asset definition
 ```yml
 ---
 type: Asset
@@ -72,7 +72,7 @@ spec:
   - entity.system.arch == 'amd64'
   - entity.system.platform_family == 'rhel'
 ```
-##### Check manifest
+##### Check definition
 ```yml
 ---
 type: CheckConfig
