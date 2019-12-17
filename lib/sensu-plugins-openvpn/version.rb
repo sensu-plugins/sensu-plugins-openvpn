@@ -1,7 +1,7 @@
 module SensuPluginsOpenvpn
   # This defines the version of the gem
   module Version
-    MAJOR = 1
+    MAJOR = 2
     MINOR = 0
     PATCH = 0
 
