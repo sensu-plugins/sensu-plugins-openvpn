@@ -1,4 +1,6 @@
 language: ruby
+services:
+- docker
 cache:
 - bundler
 before_install:
@@ -18,18 +20,30 @@ script:
 - bundle exec rake default
 - gem build sensu-plugins-openvpn.gemspec
 - gem install sensu-plugins-openvpn-*.gem
+##
+#  Checkout Bonsai helper scripts into bonsai/ directory
+##
+before_deploy:
+  - git clone https://github.com/sensu/sensu-go-bonsai-asset.git --branch feature/ruby-plugin-assets bonsai
 deploy:
-  provider: rubygems
-  api_key:
-    secure: c3FzsS7Yb0wkswWZ44TR2e0atvI3bFTMcVsa8RgrBE1Z49a0NduhuCI+ibUicOrWIldnpGplWkzlqkQXxDCEF74HE1ku+wc67As5kDVDDi8JBPl0wcZYw68vdr2GCkrPckoXiCRcDXlLSFWPEYP1/sQs3bfGIlrPIfzHg0XPdWo=
-  gem: sensu-plugins-openvpn
-  on:
-    tags: true
-    repo: sensu-plugins/sensu-plugins-openvpn
-    all_branches: true
-    rvm: 2.0
-    rvm: 2.1
-    rvm: 2.2
-    rvm: 2.3.0
-    rvm: 2.4.1
-
+  - provider: rubygems
+    api_key:
+      secure: c3FzsS7Yb0wkswWZ44TR2e0atvI3bFTMcVsa8RgrBE1Z49a0NduhuCI+ibUicOrWIldnpGplWkzlqkQXxDCEF74HE1ku+wc67As5kDVDDi8JBPl0wcZYw68vdr2GCkrPckoXiCRcDXlLSFWPEYP1/sQs3bfGIlrPIfzHg0XPdWo=
+    gem: sensu-plugins-openvpn
+    on:
+      tags: true
+      repo: sensu-plugins/sensu-plugins-openvpn
+      all_branches: true
+      rvm: 2.3.0
+      rvm: 2.4.1
+###
+# Build Bonsai Assets using ruby-runtime docker images when tagging releases
+#  NOTE: secure GITHUB_TOKEN variable must be set.  
+### 
+  - provider: script 
+    script: bonsai/ruby-runtime/travis-build-ruby-plugin-assets.sh sensu-plugins-openvpn
+    skip_cleanup: true
+    on:
+      tags: true
+      all_branches: true
+      rvm: 2.4.1
