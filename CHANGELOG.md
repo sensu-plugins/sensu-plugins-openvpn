@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Security
+- Updated yard development dependency from '~> 0.8.0' to '~> 0.9.20'
+
 ### Changed
 - Updated rubocop development dependency from '~> 0.40.0' to '~> 0.50.0' 
 
