@@ -26,16 +26,16 @@ script:
 before_deploy:
 - bash -c "[ ! -d bonsai/ ] && git clone https://github.com/sensu/sensu-go-bonsai-asset.git bonsai || echo 'bonsai/ exists, skipping git clone'"
 deploy:
-  - provider: rubygems
-    api_key:
-      secure: c3FzsS7Yb0wkswWZ44TR2e0atvI3bFTMcVsa8RgrBE1Z49a0NduhuCI+ibUicOrWIldnpGplWkzlqkQXxDCEF74HE1ku+wc67As5kDVDDi8JBPl0wcZYw68vdr2GCkrPckoXiCRcDXlLSFWPEYP1/sQs3bfGIlrPIfzHg0XPdWo=
-    gem: sensu-plugins-openvpn
-    on:
-      tags: true
-      repo: sensu-plugins/sensu-plugins-openvpn
-      all_branches: true
-      rvm: 2.3.0
-      rvm: 2.4.1
+#  - provider: rubygems
+#    api_key:
+#      secure: c3FzsS7Yb0wkswWZ44TR2e0atvI3bFTMcVsa8RgrBE1Z49a0NduhuCI+ibUicOrWIldnpGplWkzlqkQXxDCEF74HE1ku+wc67As5kDVDDi8JBPl0wcZYw68vdr2GCkrPckoXiCRcDXlLSFWPEYP1/sQs3bfGIlrPIfzHg0XPdWo=
+#    gem: sensu-plugins-openvpn
+#    on:
+#      tags: true
+#      repo: sensu-plugins/sensu-plugins-openvpn
+#      all_branches: true
+#      rvm: 2.3.0
+#      rvm: 2.4.1
 ###
 # Build Bonsai Assets using ruby-runtime docker images when tagging releases
 #  NOTE: secure GITHUB_TOKEN variable must be set.  
